@@ -1,10 +1,9 @@
-.main{
+.header{
     display: flex;
     flex-direction: column;
     align-items: center;
     user-select: none;
-    background-color: black;
-    height: 30rem;
+    height: 25rem;
 }
 
 .header h1{
@@ -20,26 +19,40 @@ color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 120%;
+    width: 130%;
     max-width: 80rem;
-    margin: auto;
     position: relative;
-    background-color: blue;
     height: 100%;
 }
 
-.arrowLeft, .arrowRight {
+.arrowLeft{
     cursor: pointer;
     font-size: 24px;
     padding: 10px;
     user-select: none;
-    background-color: #ccc;
     transition: background-color 0.3s ease;
     height: 100%;
+    bottom: 0;
+    flex-direction: column;
+    align-content: center;
+}
+
+.arrowRight{
+  cursor: pointer;
+  font-size: 24px;
+  padding: 5px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  height: 100%;
+  bottom: 0;
+  flex-direction: column;
+  align-content: center;
 }
 
 .arrowLeft:hover, .arrowRight:hover {
     background-color: #aaa;
+    height: 100%;
+    z-index: 2;
 }
 
 .stackGroup {
@@ -96,4 +109,44 @@ color: white;
     max-width: 100%; /* Scale image to fit container */
     max-height: 100px; /* Set maximum height */
     object-fit: contain; /* Maintain aspect ratio */
+}
+
+/*FOR MOBILE VIEW*/
+@media only screen and (max-width: 768px) {
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    height: 25rem;
+  }
+  
+  .stackContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 130%;
+    max-width: 80rem;
+    position: relative;
+    height: 100%;
+    padding-top: 5rem;
+  }
+
+  .stackNames{
+    align-self: center;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .iconandname{
+    align-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    text-align: center;
+    height: 50%;
+    width: 75px; /* Adjust width as needed */
+    transition: transform 0.3s ease-in-out;
+  }
 }

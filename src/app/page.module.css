@@ -20,8 +20,10 @@
 }
 
 .navigationbar{
+  position: fixed;
   padding-top: 40px;
   background-color: #045b62;
+  z-index: 1000;
 }
 
 .description {
@@ -74,6 +76,7 @@
 }
 
 .descriptiontext {
+
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
@@ -117,7 +120,7 @@
 
 
 .technicalSkills{
-padding-top: 75px;
+padding-top: 20px;
 background-color: brown;
 width: 100%;
 align-items: center;
@@ -135,14 +138,16 @@ margin: 0%;
     /*min-height: 100vh;*/ /*THIS ADJUSTS THE HEIGHT OF THE WEBPAGE*/
   }
 
-  .navigationbar{
+  .navigationbar {
     background-color: #045b62;
     width: 100%;
     text-align: center;
-  }
+    position: fixed;
+    z-index: 1000;
+}
 
   .description {
-    padding-top: 4rem;
+    padding-top: 7rem;
   }
 
   .description .introheader{
@@ -150,7 +155,8 @@ margin: 0%;
   align-items: inherit;
   font-size: 2rem;
   font-weight: 500;
-  padding-left: 1rem;
+  padding-top: 1rem;
+  
   
   /*ANIMATION*/
   display: inline-block;
@@ -182,7 +188,7 @@ margin: 0%;
   }
 
   .descriptiontext{
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 3rem;
@@ -204,4 +210,16 @@ margin: 0%;
     width: 200px;
     height: 200px;
   }
+
+  .technicalSkills{
+    padding-top: 20px;
+    background-color: brown;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0%;
+    height: 40rem;
+}
 }

@@ -5,13 +5,13 @@ import Link from "next/link";
 import GroupList from "./group/page";
 import React from 'react';
 import Head from 'next/head';
+import TechStack from "./mystacks/page";
 
 
 export default function Home() {
   return (
     <>
     <main className={styles.main}>
-      
       <div className={styles.navigationbar}>
         HEADER PLACEHOLDER
       </div>
@@ -38,7 +38,7 @@ export default function Home() {
       </div>
 
       <div className={styles.technicalSkills}>
-        <p>MY TECHNICAL STACKS</p> 
+        <TechStack/> 
       </div>
       
     </main>
